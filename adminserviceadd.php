@@ -12,7 +12,7 @@ Group MLB_01.02.04
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Warrior Zone</title>
   <link rel="stylesheet" href="../../src/style/adminArea/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -53,39 +53,39 @@ Group MLB_01.02.04
     </section>
 
     <section class="panel important">
-      <form action="adminserviceadddb.php" method="post"  enctype="multipart/form-data">
+      <form action="adminserviceadddb.php" method="post" enctype="multipart/form-data">
         <div class="row">
           <div class="col-6">
             <label for=""> Service title:</label>
             <input type="text" name="title" required />
           </div>
           <div class="col-6">
-            <label for=""> Service category:</label>
-
-            <select name="category" id="inp_category" required>
-              <option value="">Select category</option>
-              <option value="volvo">Volvo</option>
-              <option value="volvo">Volvo</option>
-              <option value="saab">Saab</option>
-              <option value="mercedes">Mercedes</option>
-              <option value="audi">Audi</option>
-            </select>
-          </div>
-
-          <div class="col-6" style="margin-right: 50px;">
             <label for=""> Service Price:</label>
             <input type="text" name="price" required />
             <br>
           </div>
           <div class="col-6">
-            <label for=""> Service Intro:</label>
-            <textarea name="intro" rows="8" cols="67" required></textarea>
+            <label for=""> Service category:</label>
+
+            <select name="category" id="inp_category" required>
+              <option value="">Select category</option>
+              <option value="Medical monitoring">Medical monitoring</option>
+              <option value="Inbody screenings">Inbody screenings</option>
+              <option value="Nutritional counseling">Nutritional counseling</option>
+              <option value="Group Fitness classes">Group Fitness classes</option>
+              <option value="Variety of Equipment">Variety of Equipment</option>
+            </select>
           </div>
+
           <div class="col-6">
+            <label for=""> Service Intro:</label>
+            <textarea name="intro" rows="4" cols="67" required></textarea>
+          </div>
+          <div class="col-12">
             <label for=""> Service Description:</label>
             <textarea name="description" rows="15" cols="67" required></textarea>
           </div>
-          <div class="col-6 ">
+          <div class="col-6">
             <label> Image </label>
             <input type="file" name="image" id="inp_image" accept="image/jpg, image/jpeg, image/png" placeholder="" onchange="readImageURLSlide(this);" required>
             <div class="image_container">

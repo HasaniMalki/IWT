@@ -18,12 +18,13 @@ $servicesdata = $conn->query($sql);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Warrior Zone</title>
     <link rel="stylesheet" href="../../src/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
     </style>
+    <script src="https://kit.fontawesome.com/3fe177132c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -31,7 +32,7 @@ $servicesdata = $conn->query($sql);
         <div class="nav-center">
             <!-- nav header -->
             <div class="nav-header">
-                <img src="https://i.postimg.cc/76jNr6VY/1982637.jpg" class="logo" alt="logo" />
+                <img src="/src/image/logo.png" class="logo" alt="logo" />
                 <button class="nav-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -39,33 +40,28 @@ $servicesdata = $conn->query($sql);
             <!-- links -->
             <ul class="links">
                 <li>
-                    <a href="index.html">home</a>
+                    <a href="index.php">home</a>
                 </li>
                 <li>
-                    <a href="about.html">about</a>
+                    <a href="#">about</a>
                 </li>
                 <li>
-                    <a href="projects.html">projects</a>
+                    <a href="service.php">services</a>
                 </li>
                 <li>
-                    <a href="contact.html">contact</a>
+                    <a href="contactus.php">contact</a>
                 </li>
             </ul>
             <!-- social media -->
             <ul class="social-icons">
                 <li>
                     <a href="https://www.twitter.com">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fab fa-facebook"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.twitter.com">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fab fa-twitter"></i>
                     </a>
                 </li>
             </ul>
@@ -97,12 +93,12 @@ $servicesdata = $conn->query($sql);
                     ?>
                         <div class="col-3">
                             <div class=" bg-card">
-                                <h3>  <?php echo $value['title'];  ?></h3>
+                                <h3> <?php echo $value['title'];  ?></h3>
                                 <img src="  <?php echo $value['image'];  ?>" alt="Trulli" width="100%">
                                 <p class="category-text">Fineness</p>
-                                <h3>LKR.   <?php echo $value['price'];  ?></h3>
-                                <p>  <?php echo $value['intro'];  ?></p>
-                                <a  href="serviceview.php?idvalue=<?php echo  $value['id'] ?>"  class="button button1">View</a>
+                                <h3>LKR. <?php echo $value['price'];  ?></h3>
+                                <p> <?php echo $value['intro'];  ?></p>
+                                <a href="serviceview.php?idvalue=<?php echo  $value['id'] ?>" class="button button1">View</a>
                             </div>
                         </div>
 

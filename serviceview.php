@@ -9,26 +9,25 @@ session_start();
 include("dbconnection.php");
 $idValue = $_GET['idvalue'];
 $sql = "select * From services where id=" . $idValue;
-if (!is_numeric($idValue)) 
-{ 
-  $_SESSION['danger'] = "Service not found";
-  header('location: adminservice.php');
+if (!is_numeric($idValue)) {
+    $_SESSION['danger'] = "Service not found";
+    header('location: adminservice.php');
 }
 $servicedata = $conn->query($sql);
 $hasValue = false;
 foreach ($servicedata as $key => $value) {
-  $hasValue = true;
-  $title = $value['title'];
-  $category = $value['category'];
-  $price = $value['price'];
-  $intro = $value['intro'];
-  $description = $value['description'];
-  $image = $value['image'];
+    $hasValue = true;
+    $title = $value['title'];
+    $category = $value['category'];
+    $price = $value['price'];
+    $intro = $value['intro'];
+    $description = $value['description'];
+    $image = $value['image'];
 }
 if (!$hasValue) {
-  $_SESSION['danger'] = "Service not found";
+    $_SESSION['danger'] = "Service not found";
 
-  header('location: service.php');
+    header('location: service.php');
 }
 
 ?>
@@ -39,12 +38,13 @@ if (!$hasValue) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Warrior Zone</title>
     <link rel="stylesheet" href="../../src/style/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
 
     </style>
+    <script src="https://kit.fontawesome.com/3fe177132c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -52,7 +52,7 @@ if (!$hasValue) {
         <div class="nav-center">
             <!-- nav header -->
             <div class="nav-header">
-                <img src="https://i.postimg.cc/76jNr6VY/1982637.jpg" class="logo" alt="logo" />
+                <img src="/src/image/logo.png" class="logo" alt="logo" />
                 <button class="nav-toggle">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -60,33 +60,28 @@ if (!$hasValue) {
             <!-- links -->
             <ul class="links">
                 <li>
-                    <a href="index.html">home</a>
+                    <a href="index.php">home</a>
                 </li>
                 <li>
-                    <a href="about.html">about</a>
+                    <a href="#">about</a>
                 </li>
                 <li>
-                    <a href="projects.html">projects</a>
+                    <a href="service.php">services</a>
                 </li>
                 <li>
-                    <a href="contact.html">contact</a>
+                    <a href="contactus.php">contact</a>
                 </li>
             </ul>
             <!-- social media -->
             <ul class="social-icons">
                 <li>
                     <a href="https://www.twitter.com">
-                        <i class="fa fa-facebook"></i>
+                        <i class="fab fa-facebook"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.twitter.com">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.twitter.com">
-                        <i class="fa fa-linkedin"></i>
+                        <i class="fab fa-twitter"></i>
                     </a>
                 </li>
             </ul>
@@ -101,9 +96,9 @@ if (!$hasValue) {
                     <div class="col-12" style="text-align: center;">
                         <img src="<?php echo $image;  ?>" alt="Trulli" width="100%" style="    max-height: 50vh;">
                     </div>
-                    <div class="col-4"  >
+                    <div class="col-4">
                         <h1><?php echo $title;  ?></h1>
-                        <p  class="category-text"><?php echo $category;  ?></p>
+                        <p class="category-text"><?php echo $category;  ?></p>
                         <h3>LKR.<?php echo $price;  ?></h3>
                     </div>
                     <div class="col-12">

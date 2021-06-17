@@ -1,7 +1,3 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Warrior Zone</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -49,34 +45,33 @@
             <label for=""> Name:</label>
             <input type="text" name="name" />
 
-          
 
-          <div class="col-6">
-            <label for=""> Age:</label>
-            <input type="text" name="age" />
-            <br>
+
+            <div class="col-6">
+              <label for=""> Age:</label>
+              <input type="text" name="age" />
+              <br>
+            </div>
+            <div class="col-6">
+              <label for=""> Course:</label>
+              <input type="text" name="course" />
+            </div>
+
+
+            <div class="col-12" style="text-align: center;">
+              <p>
+                <input type="submit" name="submit" value="Add" />
+                <input type="submit" name="delete" value="Delete" />
+                <input type="submit" name="update" value="Update" />
+              </p>
+            </div>
           </div>
-          <div class="col-6">
-            <label for=""> Course:</label>
-            <input type="text" name="course" />
-          </div>
-         
-          
-          <div class="col-12" style="text-align: center;">
-            <p>
-              <input type="submit" name="submit" value="Add" />
-              <input type="submit" name="delete" value="Delete" />
-              <input type="submit" name="update" value="Update" />
-            </p>
-          </div>
-        </div>
         </div>
       </form>
     </section>
 
   </main>
- 
+
 </body>
 
 </html>
-

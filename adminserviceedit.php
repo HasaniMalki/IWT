@@ -40,7 +40,7 @@ if (!$hasValue) {
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Warrior Zone</title>
   <link rel="stylesheet" href="../../src/style/adminArea/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -86,29 +86,30 @@ if (!$hasValue) {
         <div class="row">
           <div class="col-6">
             <label for=""> Service title:</label>
-            <input type="text" name="title" value="<?php echo  $title ?> "/>
+            <input type="text" name="title" value="<?php echo  $title ?> " />
+          </div>
+          <div class="col-6">
+            <label for=""> Service Price:</label>
+            <input type="text" name="price" value="<?php echo  $price ?> " />
+            <br>
           </div>
           <div class="col-6">
             <label for=""> Service category:</label>
             <select name="category" id="inp_category" required>
               <option value="">Select category</option>
-              <option value="volvo" <?php echo $category=='volvo'?'selected':'' ?>>Volvo</option>
-              <option value="saab" <?php echo $category=='saab'?'selected':'' ?>>Saab</option>
-              <option value="mercedes" <?php echo $category=='mercedes'?'selected':'' ?>>Mercedes</option>
-              <option value="audi"<?php echo $category=='audi'?'selected':'' ?>>Audi</option>
+              <option value="Medical monitoring" <?php echo $category == 'Medical monitoring' ? 'selected' : '' ?>>Medical monitoring</option>
+              <option value="Inbody screenings" <?php echo $category == 'Inbody screenings' ? 'selected' : '' ?>>Inbody screenings</option>
+              <option value="Nutritional counseling" <?php echo $category == 'Nutritional counseling' ? 'selected' : '' ?>>Nutritional counseling</option>
+              <option value="Group Fitness classes" <?php echo $category == 'Group Fitness classes' ? 'selected' : '' ?>>Group Fitness classes</option>
+              <option value="Variety of Equipment" <?php echo $category == 'Variety of Equipment' ? 'selected' : '' ?>>Variety of Equipment</option>
             </select>
           </div>
 
-          <div class="col-6"  style="margin-right: 50px;">
-            <label for=""> Service Price:</label>
-            <input type="text" name="price"  value="<?php echo  $price ?> "/>
-            <br>
-          </div>
-          <div class="col-6" >
+          <div class="col-6">
             <label for=""> Service Intro:</label>
             <textarea name="intro" rows="8" cols="67"><?php echo  $intro ?></textarea>
           </div>
-          <div class="col-6">
+          <div class="col-12">
             <label for=""> Service Description:</label>
             <textarea name="description" rows="15" cols="67"><?php echo  $description ?></textarea>
           </div>
@@ -120,7 +121,7 @@ if (!$hasValue) {
           </div>
           <div class="col-12" style="text-align: center;">
             <p>
-              <input type="hidden" name="idValue"  value="<?php echo  $idValue ?> ">
+              <input type="hidden" name="idValue" value="<?php echo  $idValue ?> ">
               <input type="submit" name="submit" value="Update" />
             </p>
           </div>

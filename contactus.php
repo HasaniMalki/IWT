@@ -17,12 +17,12 @@ session_start();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Warrior Zone</title>
 	<link rel="stylesheet" href="../../src/style/style.css">
 
-	
-		
-		<script src="https://kit.fontawesome.com/3fe177132c.js" crossorigin="anonymous"></script>
+
+
+	<script src="https://kit.fontawesome.com/3fe177132c.js" crossorigin="anonymous"></script>
 	<style>
 		* {
 			padding: 0;
@@ -253,16 +253,15 @@ session_start();
 		<div class="form_container">
 			<div class="title_container">
 				<h2>Warrior Zone Contact Form</h2>
-				<h3 style = "color:green">	<?php
-			
-			if (isset($_SESSION['success'])) {
-				echo $_SESSION['success'];
-				unset($_SESSION['success']);
-				
-			}
-		?></h3>
+				<h3 style="color:green"> <?php
+
+											if (isset($_SESSION['success'])) {
+												echo $_SESSION['success'];
+												unset($_SESSION['success']);
+											}
+											?></h3>
 			</div>
-			<form action = "contactusdb.php" method = "post" enctype = "multipart/form-data">
+			<form action="contactusdb.php" method="post" enctype="multipart/form-data">
 				<div class="row clearfix">
 					<div class="col_half">
 						<label>First name</label>
@@ -287,8 +286,7 @@ session_start();
 					<div class="col_half">
 						<label>Phone</label>
 						<div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
-							<input type="tel" name="phone" placeholder="Enter the phone no"
-								required />
+							<input type="tel" name="phone" placeholder="Enter the phone no" required />
 						</div>
 					</div>
 				</div>
@@ -303,7 +301,7 @@ session_start();
 				<input class="button" type="submit" value="Submit" />
 			</form>
 			<div>
-		
+
 			</div>
 
 		</div>
