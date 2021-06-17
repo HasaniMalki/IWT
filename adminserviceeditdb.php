@@ -1,8 +1,9 @@
-<!-- ******************
+
+<!-- ******
 IT20615970
 Gunapala K. M. H. M. M 
 Group MLB_01.02.04
-****************** -->
+****** -->
 
 <?php
 session_start();
@@ -18,12 +19,6 @@ $servicedata = $conn->query($sql);
 $hasValue = false;
 foreach ($servicedata as $key => $value) {
   $hasValue = true;
-  $title = $value['title'];
-  $category = $value['category'];
-  $price = $value['price'];
-  $intro = $value['intro'];
-  $description = $value['description'];
-  $image = $value['image'];
 }
 if (!$hasValue) {
   $_SESSION['danger'] = "Service not found";
@@ -31,7 +26,9 @@ if (!$hasValue) {
   header('location: adminservice.php');
 }
 
-$sql = "UPDATE services SET title='".$_POST['category']."',title='".$_POST['category']."' WHERE id=".$idValue;
+// $sql = "UPDATE services SET title='".$_POST['category']."',title='".$_POST['category']."' WHERE id=".$idValue;
+
+$sql = "UPDATE services SET  title='".$_POST['title']."' ,category='".$_POST['category']."' ,price='".$_POST['price']."' ,intro='".$_POST['intro']."',description='".$_POST['description']."' WHERE id=".$idValue;
 
 if($conn -> query($sql)==true){
   session_start(); //also can be done before it

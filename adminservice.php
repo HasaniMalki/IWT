@@ -93,7 +93,7 @@ $servicesdata = $conn->query($sql);
         <thead>
           <tr>
             <th>Id</th>
-            <th>Service Image</th>
+            <th>Service Catagory</th>
             <th>Service Name</th>
             <th>Action</th>
           </tr>
